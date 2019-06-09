@@ -4,7 +4,7 @@ function preload(){
     bits8 = loadFont('fonts/8-BIT WONDER.TTF')
 }
 function setup() {
-     cnv = createCanvas(window.innerWidth, window.innerHeight*.8);
+     cnv = createCanvas(window.innerWidth, window.innerHeight*.75);
     cnv.style('display', 'block');
     cnv.parent('sketch-holder');
     titulo = loadImage('assets/cade_o_kit_bixo.png');
@@ -116,13 +116,13 @@ function mousePressed() {
 
 function windowResized() {
     
-  resizeCanvas(windowWidth, windowHeight*.8);
-    centerCanvas();
+  resizeCanvas(windowWidth, windowHeight*.75);
+    //centerCanvas();
   }
 
   function centerCanvas() {
     var xx = (windowWidth - width) / 2;
-    var yy = (windowHeight*.8 - height) / 2;
+    var yy = (windowHeight*.75 - height) / 2;
     cnv.position(xx, yy);
   }
   

@@ -1,16 +1,17 @@
 .responsive {
-    width: 30%;
+    width: 25%;
     height: auto;
     align: center;
   }
   
   .lai {
-      height: 40%;
+      height: 30%;
       text-align: center;
   }
   body {
       background-color:#1E1F21;
       text-align: center;
+      display: block;
   }
   @font-face {
     font-family: bits;
