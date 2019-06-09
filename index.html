@@ -26,27 +26,28 @@
     </div>
     
     <div id="bgbut" class="lai" style="text-align: center">
-        
-        <div class="row " >
-            <div class="col-md-3 mb-3">
+        <p style="font-family: bits; color:white">envie um email para ele!</p>
+        <div class="form-row" id="contact" >
+            <div class="col-md-4 mb-4">
             </div>
-            <div class="col-md-3 mb-3">
-                <label for="name" style="font-family: bits; color:white">Seu nome:</label>
-                <input type="text" class="form-control" id="nome" placeholder="">
+            <div class="col-md-4 mb-3">
+                <label for="nomeform" style="font-family: bits; color:white">Seu nome:</label>
+                <input type="text" class="form-control" id="nomeform" name="nomeform" placeholder="" style="text-align:center">
            </div>
-            <div class="col-md-3 mb-3">
-                <label for="exampleInputEmail1" style="font-family: bits;color:white">email</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="">
+            <div class="col-md-3 mb-3"><!--
+                <label for="emailform" style="font-family: bits;color:white">email</label>
+                <input type="email" class="form-control" id="emailform" name="emailform" aria-describedby="emailHelp" placeholder="">
+                -->
                 </div>
                 <div class="col-md-3 mb-3"></div>
                 <div class="col-md-3 mb-3"></div>
                 <div class="">
-               <input type="image" src="assets/enviar email.png" alt="Submit" class="responsive">
+                <input type="image" src="assets/enviar email.png" alt="Submit" class="responsive" onclick="sendMail()">
                 </div>
                 
                 </button>
         </div>  
         
-    </div>
+    </div> 
   </body>
 </html>

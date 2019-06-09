@@ -33,7 +33,7 @@ function textos(){
     strokeWeight(5);
     posX = map(mouseX, 0, width, -150, 150)
     text(`Ajude o nosso amigo Natal a 
-se lembrar do kit bixo`, width/2+posX,mouseY*0.15 + height*.66);
+lembrar do kit bixo`, width/2+posX,mouseY*0.15 + height*.66);
     
 
     imageMode(CENTER);
@@ -126,3 +126,24 @@ function windowResized() {
     cnv.position(xx, yy);
   }
   
+  function sendMail() {
+    var name = document.getElementById("nomeform").value;
+   // var email = document.getElementById("emailform").value;
+    var message = `olá amigo, quando vai chegar o kit-bixo?
+    `
+    //var message = $('#0 textarea').val();
+    window.location.href = 'mailto:gabrielpeixoto436@gmail.com?subject=[KIT BIXO] - ' + name  + '&body=' + message + name;
+    print(name);
+};
+/*
+<script>
+function sendMail()
+{
+    var yourMessage = document.getElementById("message").value;
+    var subject = document.getElementById("selectList").value;
+    document.location.href = "mailto:chrisgreg23@googlemail.com?subject="
+        + encodeURIComponent(subject)
+        + "&body=" + encodeURIComponent(yourMessage);
+}
+</script>
+*/
