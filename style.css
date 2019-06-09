@@ -1,0 +1,20 @@
+.responsive {
+    width: 30%;
+    height: auto;
+    align: center;
+  }
+  
+  .lai {
+      height: 40%;
+      text-align: center;
+  }
+  body {
+      background-color:#1E1F21;
+      text-align: center;
+  }
+  @font-face {
+    font-family: bits;
+    src: url(fonts/8-BIT\ WONDER.TTF);
+  }
+  
+  

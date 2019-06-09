@@ -1,10 +1,12 @@
-let titulo, clickX, clickY;
+let titulo, clickX, clickY,cnv;
 var value = 0;
 function preload(){
     bits8 = loadFont('fonts/8-BIT WONDER.TTF')
 }
 function setup() {
-    createCanvas(window.innerWidth, window.innerHeight);
+     cnv = createCanvas(window.innerWidth, window.innerHeight*.8);
+    cnv.style('display', 'block');
+    cnv.parent('sketch-holder');
     titulo = loadImage('assets/cade_o_kit_bixo.png');
     nataln = loadImage('assets/natal normal.png');
     natalninv = loadImage('assets/natal normal invertido.png');
@@ -12,6 +14,8 @@ function setup() {
     natalinv = loadImage('assets/natal piscando invertido.png');
     enviarEmail = loadImage('assets/enviar email.png');
 }
+
+
 function draw() {
     background(49,51,53);
     wave();
@@ -48,20 +52,24 @@ se lembrar do kit bixo`, width/2+posX,mouseY*0.15 + height*.66);
         else
         image(natalinv,0,0);
     }
+    /*
     rotate(-rot);
     imageMode(CENTER);
-    titulosizex = height*.0002*titulo.width;
-    titulosizey = height*.0002*titulo.height;
-    
-    image(enviarEmail,0,height*.4,titulosizex, titulosizey);
-    if(clickX > width/2 - titulosizex*0.5 && clickX < width/2 + titulosizex*0.5 && clickY > height*.6 + titulosizey*.5 ){
-        point(clickX,clickY);
+    titulosizex = height*.0002*enviarEmail.width;
+    titulosizey = height*.0002*enviarEmail.height;   
+    if(clickX > width/2 - titulosizex*0.5 && clickX < width/2 + titulosizex*0.5 && clickY > height*.9 - titulosizey/2 && clickY < height*.9 + titulosizey/2){
+        
         //print("ok");
+        
     }
     else{
+        
         //print(clickX);
     }
+    image(enviarEmail,0,height*.4,titulosizex, titulosizey);
+    
     //<a class="btn btn-info btn-lg" href="#" role="button">Click this button for some truth</a>
+    */
 }
 
 let yoff = 0.0;
@@ -106,3 +114,15 @@ function mousePressed() {
     clickY = mouseY;
 }
 
+function windowResized() {
+    
+  resizeCanvas(windowWidth, windowHeight*.8);
+    centerCanvas();
+  }
+
+  function centerCanvas() {
+    var xx = (windowWidth - width) / 2;
+    var yy = (windowHeight*.8 - height) / 2;
+    cnv.position(xx, yy);
+  }
+  
